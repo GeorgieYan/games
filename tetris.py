@@ -339,3 +339,4 @@ def start_menu():
 window = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Tetris')
 start_menu()
+#inspired by techwithtim
