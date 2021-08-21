@@ -70,31 +70,31 @@ void game(){
                 continue;
             }
             else{
-                if(i - 1 >= 0 && j - 1 >= 0 && mine_planted[i - 1][j - 1] == 'M'){
+                if(i - 1 >= 0 && mine_planted[i - 1][j] == 'M'){
                     mine_count++;
                 }
 
-                if(i - 1 >= 0 && mine_planted[i - 1][j] == 'M'){
+                if(i - 1 >= 0 && j - 1 >= 0 && mine_planted[i - 1][j - 1] == 'M'){
                     mine_count++;
                 }
 
                 if(i - 1 >= 0 && j + 1 < column && mine_planted[i - 1][j + 1] == 'M'){
                     mine_count++;
                 }
-
-                if(j - 1 >= 0 && mine_planted[i][j - 1] == 'M'){
-                    mine_count++;
-                }
-
-                if(j + 1 < column && mine_planted[i][j + 1] == 'M'){
-                    mine_count++;
-                }
-
+                
                 if(i + 1 < row && j - 1 >= 0 && mine_planted[i + 1][j - 1] == 'M'){
                     mine_count++;
                 }
 
+                if(j - 1 >= 0 && mine_planted[i][j - 1] == 'M'){
+                    mine_count++;
+                }
+                
                 if(i + 1 < row && mine_planted[i + 1][j] == 'M'){
+                    mine_count++;
+                }
+                
+                if(j + 1 < column && mine_planted[i][j + 1] == 'M'){
                     mine_count++;
                 }
 
